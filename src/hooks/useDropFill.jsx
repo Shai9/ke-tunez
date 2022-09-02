@@ -37,10 +37,10 @@ const SelectedDiv = styled.div`
     border: 1px solid;
     text-align: center;
     color: white;
-    background-color: #247320;
+    background-color: #247320
     font-size: 130%;
     cursor: pointer;
-    border-color: black;
+    border-color: blue;
     z-index: 99999;
 `
 

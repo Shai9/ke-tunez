@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ExactDetails from "./ExactDetails";
+import TrueDetails from "./TrueDetails";
 
 function DetailsContainer ({user}) {
 
@@ -88,7 +88,7 @@ const handleAdd = (song) =>
       })
   }
 
-  const showSong = song.map(song => <ExactDetails key={song.title} song={song} formBool={formBool} user={user} handleRemove={handleRemove} handleAdd={handleAdd} reviews={reviews} handleFormBool={handleFormBool} handleEditReview={handleEditReview} handleCreateReview={handleCreateReview}/>)
+  const showSong = song.map(song => <TrueDetails key={song.title} song={song} formBool={formBool} user={user} handleRemove={handleRemove} handleAdd={handleAdd} reviews={reviews} handleFormBool={handleFormBool} handleEditReview={handleEditReview} handleCreateReview={handleCreateReview}/>)
 
   return(
       <>

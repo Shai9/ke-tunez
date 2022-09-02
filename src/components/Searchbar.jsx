@@ -1,4 +1,4 @@
-import DropdownForm from "./Dropdownform"
+import DropdownForm from "./DropdownForm"
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { Button } from "@mui/material";
@@ -48,11 +48,12 @@ function Searchbar () {
                 <ToggleButton value="Jazz">Jazz</ToggleButton>
                 <ToggleButton value="Blues">Blues</ToggleButton>
                 <ToggleButton value="Reggae">Reggae</ToggleButton>
+                <ToggleButton value="Local">Local</ToggleButton>
             </ToggleButtonGroup>
             </div>
             <div>
             <br/>
-            {genreToggle ? <Link to={`/genres/${genreToggle}`}><Button variant="contained" color="success">Go</Button></Link> : <Button variant="contained" color="success" disabled>Go</Button>}
+            {genreToggle ? <Link to={`/genres/${genreToggle}`}><Button variant="contained" color="success">Find</Button></Link> : <Button variant="contained" color="success" disabled>Find</Button>}
             </div>
             <h3>Search by Song:</h3>
             <DropdownForm array={songArray} handleSubmit={handleSearchSubmit}/>

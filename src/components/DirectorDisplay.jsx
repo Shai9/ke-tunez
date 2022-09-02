@@ -20,7 +20,7 @@ function DirectorDisplay () {
           setDirector(data)
       })
   }, [])
-  let movies
+  let songs
   if (director.songs.length > 0){
       songs = director.songs.map(m => <Link to={`/songs/${m.id}`}><h3>{m.title}</h3></Link>)
   } else {
@@ -60,4 +60,5 @@ img{
     width: 40%;
 }
 `
+
 

@@ -28,7 +28,7 @@ margin: 10px 2.5% 10px 2.5%;
 padding: 5px 5px 5px 5px;
 width: calc(20% - 10px);
 min-height: 250px;
-border-color: black;
+border-color: blue;
 background-color: hsl(0, 0%, 98%);
 box-shadow: 3px 3px 4px black;
 position: relative;

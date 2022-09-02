@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button } from "@mui/material";
 import Review from "./Review";
-import ReviewForm from "./ReviewDisplay";
+import ReviewForm from "./ReviewsDisplay";
 
 
 function TrueDetails ({song, formBool, user, handleRemove, handleAdd, reviews, handleFormBool, handleEditReview, handleCreateReview}) {
