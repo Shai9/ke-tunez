@@ -14,7 +14,7 @@ function GenreDisplay () {
         fetch(`http://localhost:9292/genres/${sortGenre.genre}`)
         .then(res => res.json())
         .then(data =>{
-            setUserMovies(data)
+            setUserSongs(data)
         })
       }, [])
 
@@ -35,7 +35,7 @@ function GenreDisplay () {
     }
 
     const handleRemoveFromWatchlist = (song) => {
-        fetch(`http://localhost:9292/watchlist/${movie.watchlist.id}`, {
+        fetch(`http://localhost:9292/watchlist/${song.watchlist.id}`, {
             method: 'DELETE',
             headers: {
             'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ function GenreDisplay () {
         })
     }
     
-    const showSongs = userSongs.map(item => <CardDisplay key={item.song.id} movie={item} handleAddToWatchlist={handleAddToWatchlist} handleRemoveFromWatchlist={handleRemoveFromWatchlist}/>)
+    const showSongs = userSongs.map(item => <CardDisplay key={item.song.id} song={item} handleAddToWatchlist={handleAddToWatchlist} handleRemoveFromWatchlist={handleRemoveFromWatchlist}/>)
 
     return(
         <>
