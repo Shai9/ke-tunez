@@ -2,21 +2,21 @@ import Button from '@mui/material/Button';
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
-function CardDisplay ({movie, handleAddToWatchlist, handleRemoveFromWatchlist}) {
+function CardDisplay ({song, handleAddToWatchlist, handleRemoveFromWatchlist}) {
 
     return(
     <CardDiv>
-        <img src={movie.movie.movie_img} alt={movie.movie.title}/>
-        <Link to={`/movies/${movie.movie.id}`}>
-            <h3>{movie.movie.title}</h3>
+        <img src={song.song_img} alt={song.song.title}/>
+        <Link to={`/songs/${song.song.id}`}>
+            <h3>{song.song.title}</h3>
         </Link>
-        {movie.review ? <h4 style={{color: 'gold'}}>{"★".repeat(movie.review.star_rating)}</h4> : <h5>*not yet reviewed*</h5>}
-        <h6>Directed by:</h6>
-        <Link to={`/directors/${movie.director.id}`}>
-        <DirectorH4 onClick={() => console.log("director")}>{movie.director.first_name} {movie.director.last_name}</DirectorH4>
+        {song.review ? <h4 style={{color: 'gold'}}>{"★".repeat(song.review.star_rating)}</h4> : <h5>*Yet To Be Reviewed*</h5>}
+        <h6>Directed By:</h6>
+        <Link to={`/directors/${song.director.id}`}>
+        <DirectorH4 onClick={() => console.log("director")}>{song.director.first_name} {song.director.last_name}</DirectorH4>
         </Link>
-        <h5>{movie.movie.genre} | Rated {movie.movie.mpa_rating}</h5>
-        {movie.watchlist ? <Button size="small" variant="contained" color="secondary" onClick={() => handleRemoveFromWatchlist(movie)}>Remove from Watchlist</Button> : <Button size="small" variant="contained" color="success" onClick={() => handleAddToWatchlist(movie)}>Add to Watchlist</Button>}
+        <h5>{song.song.genre} | Rated {song.song.mpa_rating}</h5>
+        {song.watchlist ? <Button size="small" variant="contained" color="secondary" onClick={() => handleRemoveFromWatchlist(song)}>Remove from Watchlist</Button> : <Button size="small" variant="contained" color="success" onClick={() => handleAddToWatchlist(song)}>Add to Watchlist</Button>}
     </CardDiv>
     )
 }
