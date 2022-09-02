@@ -18,7 +18,7 @@ function TrueDetails ({song, formBool, user, handleRemove, handleAdd, reviews, h
         {watchId ? <Button size="small" variant="contained" color="secondary" onClick={() => handleRemove(watchId)}>Remove From Watchlist</Button> : <Button size="small" variant="contained" color="success" onClick={() => handleAdd(song)}>Add To Watchlist</Button>}
         {revId ? <Button size="small" variant="contained" color="warning" onClick={() => handleFormBool()}>Edit Review</Button> : <Button size="small" variant="contained" color="primary" onClick={() => handleFormBool()}>Create Review</Button>}
         {formBool ? null : <Review review={revId}/>}
-        {formBool ? <ReviewForm handleFormBool={handleFormBool} review={revId} handleEditReview={handleEditReview} handleCreateReview={handleCreateReview} movie={song}/> : null}
+        {formBool ? <ReviewForm handleFormBool={handleFormBool} review={revId} handleEditReview={handleEditReview} handleCreateReview={handleCreateReview} song={song}/> : null}
         </DetailsDiv>
     )
 }
