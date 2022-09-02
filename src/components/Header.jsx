@@ -13,7 +13,7 @@ function Header () {
             <NavLink to="/watchlist">    Watchlist    |</NavLink>
             <NavLink to="/reviews">    Reviews    |</NavLink>
             <NavLink to="/suggestions"> Suggests  |</NavLink>
-            <NavLink to="/findmovie"> Find Something New</NavLink>
+            <NavLink to="/findsong"> Find Something New</NavLink>
         </HeaderDiv>
     )
 }
