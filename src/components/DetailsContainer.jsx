@@ -20,7 +20,7 @@ const [formBool, setFormBool] = useState(false)
     fetch(`http://localhost:9292/songs/${pathId.id}`)
     .then(r => r.json())
     .then(data => {
-        setMovie([data])
+        setSong([data])
     })
     }, [])
   const handleRemove = (watchId) => {
@@ -62,7 +62,7 @@ const handleAdd = (song) =>
           body: JSON.stringify({
             star_rating: data.star_rating,
             comment: data.comment,
-            id: movie.id
+            id: song.id
           })
         })
         .then(res => res.json())

@@ -19,7 +19,7 @@ function FindNewSong () {
 
     if (newSong === "No Reviews")
         newSongToShow = <h1>Review some songs to get a suggestion!</h1>
-    else if (newMovie === "Not enough reviews")
+    else if (newSong === "Not enough reviews")
         newSongToShow = <h1>We couldn't find you a match. Try adding more reviews to get a suggestion!</h1>
     else if (!newSong)
         newSongToShow = null
